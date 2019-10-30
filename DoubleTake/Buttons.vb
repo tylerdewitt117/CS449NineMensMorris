@@ -1,8 +1,12 @@
 ﻿Public Class Buttons
     Private turnCounter As Integer = 0
-    Private whitePieces As Integer = 1
-    Private blackPieces As Integer = 1
+    Public whitePieces As Integer = 1
+    Public blackPieces As Integer = 1
+    Private allPiecesPlaced As Boolean = False
+    Public gameOver As Boolean = False
 
+    Dim isGameOver As New gameOver
+    Dim potentialMill As New Mills
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         turnCounter += 1
@@ -15,12 +19,25 @@
                 whitePieces += 1
             End If
         Else
+            'when blackPieces gets to 9 no more can be placed
             If blackPieces <= 9 Then
                 Button1.BackColor = Color.Black
                 Button1.Enabled = False
                 blackPieces += 1
             End If
         End If
+
+        'determine if all pieces have been placed
+        If turnCounter = 18 Then
+            allPiecesPlaced = True
+        End If
+
+        ' determine if the game has ended
+        If allPiecesPlaced Then
+            If isGameOver.stateOfGame() Then
+            End If
+        End If
+
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -38,6 +55,18 @@
                 Button2.BackColor = Color.Black
                 Button2.Enabled = False
                 blackPieces += 1
+            End If
+        End If
+
+        'determine if all pieces have been placed
+        If turnCounter = 18 Then
+            allPiecesPlaced = True
+        End If
+
+        ' determine if the game has ended
+        If allPiecesPlaced Then
+            If isGameOver.stateOfGame() Then
+
             End If
         End If
     End Sub
@@ -59,6 +88,18 @@
                 blackPieces += 1
             End If
         End If
+
+        'determine if all pieces have been placed
+        If turnCounter = 18 Then
+            allPiecesPlaced = True
+        End If
+
+        ' determine if the game has ended
+        If allPiecesPlaced Then
+            If isGameOver.stateOfGame() Then
+
+            End If
+        End If
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
@@ -76,6 +117,18 @@
                 Button4.BackColor = Color.Black
                 Button4.Enabled = False
                 blackPieces += 1
+            End If
+        End If
+
+        'determine if all pieces have been placed
+        If turnCounter = 18 Then
+            allPiecesPlaced = True
+        End If
+
+        ' determine if the game has ended
+        If allPiecesPlaced Then
+            If isGameOver.stateOfGame() Then
+
             End If
         End If
     End Sub
@@ -97,6 +150,18 @@
                 blackPieces += 1
             End If
         End If
+
+        'determine if all pieces have been placed
+        If turnCounter = 18 Then
+            allPiecesPlaced = True
+        End If
+
+        ' determine if the game has ended
+        If allPiecesPlaced Then
+            If isGameOver.stateOfGame() Then
+
+            End If
+        End If
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
@@ -114,6 +179,18 @@
                 Button6.BackColor = Color.Black
                 Button6.Enabled = False
                 blackPieces += 1
+            End If
+
+            'determine if all pieces have been placed
+            If turnCounter = 18 Then
+                allPiecesPlaced = True
+            End If
+
+            ' determine if the game has ended
+            If allPiecesPlaced Then
+                If isGameOver.stateOfGame() Then
+
+                End If
             End If
         End If
     End Sub
@@ -135,6 +212,18 @@
                 blackPieces += 1
             End If
         End If
+
+        'determine if all pieces have been placed
+        If turnCounter = 18 Then
+            allPiecesPlaced = True
+        End If
+
+        ' determine if the game has ended
+        If allPiecesPlaced Then
+            If isGameOver.stateOfGame() Then
+
+            End If
+        End If
     End Sub
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
@@ -152,6 +241,18 @@
                 Button8.BackColor = Color.Black
                 Button8.Enabled = False
                 blackPieces += 1
+            End If
+        End If
+
+        'determine if all pieces have been placed
+        If turnCounter = 18 Then
+            allPiecesPlaced = True
+        End If
+
+        ' determine if the game has ended
+        If allPiecesPlaced Then
+            If isGameOver.stateOfGame() Then
+
             End If
         End If
     End Sub
@@ -173,6 +274,18 @@
                 blackPieces += 1
             End If
         End If
+
+        'determine if all pieces have been placed
+        If turnCounter = 18 Then
+            allPiecesPlaced = True
+        End If
+
+        ' determine if the game has ended
+        If allPiecesPlaced Then
+            If isGameOver.stateOfGame() Then
+
+            End If
+        End If
     End Sub
 
     Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
@@ -190,6 +303,18 @@
                 Button10.BackColor = Color.Black
                 Button10.Enabled = False
                 blackPieces += 1
+            End If
+        End If
+
+        'determine if all pieces have been placed
+        If turnCounter = 18 Then
+            allPiecesPlaced = True
+        End If
+
+        ' determine if the game has ended
+        If allPiecesPlaced Then
+            If isGameOver.stateOfGame() Then
+
             End If
         End If
     End Sub
@@ -211,6 +336,18 @@
                 blackPieces += 1
             End If
         End If
+
+        'determine if all pieces have been placed
+        If turnCounter = 18 Then
+            allPiecesPlaced = True
+        End If
+
+        ' determine if the game has ended
+        If allPiecesPlaced Then
+            If isGameOver.stateOfGame() Then
+
+            End If
+        End If
     End Sub
 
     Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
@@ -228,6 +365,18 @@
                 Button12.BackColor = Color.Black
                 Button12.Enabled = False
                 blackPieces += 1
+            End If
+        End If
+
+        'determine if all pieces have been placed
+        If turnCounter = 18 Then
+            allPiecesPlaced = True
+        End If
+
+        ' determine if the game has ended
+        If allPiecesPlaced Then
+            If isGameOver.stateOfGame() Then
+
             End If
         End If
     End Sub
@@ -249,6 +398,18 @@
                 blackPieces += 1
             End If
         End If
+
+        'determine if all pieces have been placed
+        If turnCounter = 18 Then
+            allPiecesPlaced = True
+        End If
+
+        ' determine if the game has ended
+        If allPiecesPlaced Then
+            If isGameOver.stateOfGame() Then
+
+            End If
+        End If
     End Sub
 
     Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Button14.Click
@@ -266,6 +427,18 @@
                 Button14.BackColor = Color.Black
                 Button14.Enabled = False
                 blackPieces += 1
+            End If
+        End If
+
+        'determine if all pieces have been placed
+        If turnCounter = 18 Then
+            allPiecesPlaced = True
+        End If
+
+        ' determine if the game has ended
+        If allPiecesPlaced Then
+            If isGameOver.stateOfGame() Then
+
             End If
         End If
     End Sub
@@ -287,6 +460,18 @@
                 blackPieces += 1
             End If
         End If
+
+        'determine if all pieces have been placed
+        If turnCounter = 18 Then
+            allPiecesPlaced = True
+        End If
+
+        ' determine if the game has ended
+        If allPiecesPlaced Then
+            If isGameOver.stateOfGame() Then
+
+            End If
+        End If
     End Sub
 
     Private Sub Button16_Click(sender As Object, e As EventArgs) Handles Button16.Click
@@ -304,6 +489,18 @@
                 Button16.BackColor = Color.Black
                 Button16.Enabled = False
                 blackPieces += 1
+            End If
+        End If
+
+        'determine if all pieces have been placed
+        If turnCounter = 18 Then
+            allPiecesPlaced = True
+        End If
+
+        ' determine if the game has ended
+        If allPiecesPlaced Then
+            If isGameOver.stateOfGame() Then
+
             End If
         End If
     End Sub
@@ -325,6 +522,18 @@
                 blackPieces += 1
             End If
         End If
+
+        'determine if all pieces have been placed
+        If turnCounter = 18 Then
+            allPiecesPlaced = True
+        End If
+
+        ' determine if the game has ended
+        If allPiecesPlaced Then
+            If isGameOver.stateOfGame() Then
+
+            End If
+        End If
     End Sub
 
     Private Sub Button18_Click(sender As Object, e As EventArgs) Handles Button18.Click
@@ -342,6 +551,18 @@
                 Button18.BackColor = Color.Black
                 Button18.Enabled = False
                 blackPieces += 1
+            End If
+        End If
+
+        'determine if all pieces have been placed
+        If turnCounter = 18 Then
+            allPiecesPlaced = True
+        End If
+
+        ' determine if the game has ended
+        If allPiecesPlaced Then
+            If isGameOver.stateOfGame() Then
+
             End If
         End If
     End Sub
@@ -363,6 +584,18 @@
                 blackPieces += 1
             End If
         End If
+
+        'determine if all pieces have been placed
+        If turnCounter = 18 Then
+            allPiecesPlaced = True
+        End If
+
+        ' determine if the game has ended
+        If allPiecesPlaced Then
+            If isGameOver.stateOfGame() Then
+
+            End If
+        End If
     End Sub
 
     Private Sub Button20_Click(sender As Object, e As EventArgs) Handles Button20.Click
@@ -380,6 +613,18 @@
                 Button20.BackColor = Color.Black
                 Button20.Enabled = False
                 blackPieces += 1
+            End If
+        End If
+
+        'determine if all pieces have been placed
+        If turnCounter = 18 Then
+            allPiecesPlaced = True
+        End If
+
+        ' determine if the game has ended
+        If allPiecesPlaced Then
+            If isGameOver.stateOfGame() Then
+
             End If
         End If
     End Sub
@@ -401,6 +646,18 @@
                 blackPieces += 1
             End If
         End If
+
+        'determine if all pieces have been placed
+        If turnCounter = 18 Then
+            allPiecesPlaced = True
+        End If
+
+        ' determine if the game has ended
+        If allPiecesPlaced Then
+            If isGameOver.stateOfGame() Then
+
+            End If
+        End If
     End Sub
 
     Private Sub Button22_Click(sender As Object, e As EventArgs) Handles Button22.Click
@@ -418,6 +675,18 @@
                 Button22.BackColor = Color.Black
                 Button22.Enabled = False
                 blackPieces += 1
+            End If
+        End If
+
+        'determine if all pieces have been placed
+        If turnCounter = 18 Then
+            allPiecesPlaced = True
+        End If
+
+        ' determine if the game has ended
+        If allPiecesPlaced Then
+            If isGameOver.stateOfGame() Then
+
             End If
         End If
     End Sub
@@ -439,6 +708,18 @@
                 blackPieces += 1
             End If
         End If
+
+        'determine if all pieces have been placed
+        If turnCounter = 18 Then
+            allPiecesPlaced = True
+        End If
+
+        ' determine if the game has ended
+        If allPiecesPlaced Then
+            If isGameOver.stateOfGame() Then
+
+            End If
+        End If
     End Sub
 
     Private Sub Button24_Click(sender As Object, e As EventArgs) Handles Button24.Click
@@ -458,6 +739,17 @@
                 blackPieces += 1
             End If
         End If
-    End Sub
 
+        'determine if all pieces have been placed
+        If turnCounter = 18 Then
+            allPiecesPlaced = True
+        End If
+
+        ' determine if the game has ended
+        If allPiecesPlaced Then
+            If isGameOver.stateOfGame() Then
+                MessageBox.Show("Game Over")
+            End If
+        End If
+    End Sub
 End Class

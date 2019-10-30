@@ -1,6 +1,7 @@
 ﻿Public Class Mills
 
     Public Function isMill() As Boolean
+
         'determine if white pieces have made a mill
         If Buttons.Button1.BackColor = Color.White AndAlso Buttons.Button2.BackColor = Color.White AndAlso Buttons.Button3.BackColor = Color.White Then
             Return True
@@ -196,6 +197,4 @@
             Return False
         End If
     End Function
-
-
 End Class

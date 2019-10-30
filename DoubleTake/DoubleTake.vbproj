@@ -80,6 +80,7 @@
       <DependentUpon>Buttons.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="gameOver.vb" />
     <Compile Include="Mills.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
